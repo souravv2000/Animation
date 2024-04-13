@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            width: 1100px;
+            justify-content: space-between;
+            /* -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004); */
+        }
+
+        .container img {
+            max-width: 350px;
+            transform-origin: center;
+            transform: perspective(800px) rotateY(20deg);
+            transition: 0.5s;
+            box-shadow: 0px 0px 8px grey;
+            border-radius: 5px;
+        }
+
+        .container:hover img {
+            opacity: 0.3;
+        }
+
+        .container img:hover {
+            transform: perspective(800px) rotateY(0deg);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="images/img1.webp" alt="image1">
+        <img src="images/img2.webp" alt="image2">
+        <img src="images/img3.jpg" alt="image3">
+    </div>
+
+</body>
+
+</html>
